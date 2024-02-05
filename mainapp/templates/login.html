@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <body style="background-image: url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg');"> -->
+<body style=" margin-top: 100px; background-image: url('https://img.freepik.com/free-photo/selective-focus-shot-pencil-notebook-white-table_181624-46156.jpg?w=900&t=st=1706361794~exp=1706362394~hmac=24e28011e9cff59bae8d68af7d4a45f7c72b93403f7747aa210882bc60aa236e'); background-size: cover; background-position: center; height: 100%; background-attachment: fixed;">
+    <center>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div>
+                <!-- Candidate Section -->
+                <h1 style="color: rgb(15, 0, 82);">Signin</h1>
+                <label for="email" style="margin-top: 10px;">Email</label>
+                <input type="email" name="email" id="email" style="margin-bottom: 10px; padding: 5px; border-radius: 5px;" placeholder="Email /example@gmail.com required"><br>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" style="margin-bottom: 10px; padding: 5px; border-radius: 5px;" placeholder="Password /AxEaksi12@$" required><br>
+                <a href="/">Signup here</a>
+                <p>{{message}}</p>
+                <input type="submit" name="login" value="Register" style="padding: 8px; color:rgb(0, 255, 234); background-color: rgb(15, 0, 82); border-radius: 10px;">
+            </div>
+        </form>
+    </center>
+</body>
+</html>

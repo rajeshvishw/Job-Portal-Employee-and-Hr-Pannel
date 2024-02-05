@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image: url('https://e0.pxfuel.com/wallpapers/889/665/desktop-wallpaper-plain-blue-bright-blue-plain.jpg'); background-size: 100%;">
+    <button><a href="/companyprofile/">Home</a></button>
+    <form action="" method="POST" style="margin-top: 100px;" enctype="multipart/form-data">
+        {% csrf_token %}
+        <center>
+            <table>
+                <div>
+                    <tr>
+                        <td>Company Name</td>
+                        <td><input type="text" name="companyname" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Job Title</td>
+                        <td><input type="text" name="jobtitle" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Job Description</td>
+                        <td><input type="text" name="jobdescription" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td><input type="text" name="city" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>State</td>
+                        <td><input type="text" name="state" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Salary</td>
+                        <td><input type="text" name="salary" id="">
+                            <select name="salarytype" id="" required>
+                                <option value="">Salary Type</option>
+                                <option value="month">Month</option>
+                                <option value="year">year</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Upload Company Logo</td>
+                        <td><input type="file" name="companyimage" id="" required></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" style="border-radius: 5px;">Submit</button></td>
+                    </tr>
+                </div>
+            </table>
+        </center>
+    </form>
+</body>
+</html>

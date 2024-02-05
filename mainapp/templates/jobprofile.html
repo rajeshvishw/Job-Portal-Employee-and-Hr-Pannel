@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+    </head>
+
+    <body>
+        <button style="float: right; margin-top: 0px;"><a href="/logout">Log Out</a></button>
+        <img src="https://w7.pngwing.com/pngs/308/84/png-transparent-job-employment-website-recruitment-data-entry-clerk-others-text-trademark-logo.png"
+            alt="" style="float: right; height: 110px; width: 110px; border-radius: 55px;margin-right:50px;">
+        <h1>WELLCOME {{firstname}} {{lastname}}</h1>
+        <div style="display: flex; margin-left: 55px;">
+            <button style="background-color: aquamarine; border-radius: 5px;"><a href="/jobprofile/">Home</a></button>
+            <button style="margin-left: 6px; background-color: bisque; border-radius: 5px;"><a
+                    href="/userprofile/">Profile</a></button>
+        </div>
+        <center>
+            <form action="" method="GET">
+                <div style="border: 1px solid #000; width: 550px; margin-top: -30px; border-radius: 5px;">
+                    <img style="height: 15px; width: 15px; margin-top: 0px;"
+                        src="https://static.thenounproject.com/png/875351-200.png" alt="">
+                    <input style="margin-top: 10px; border: 0;" type="text" name="sjobtitle" id=""
+                        placeholder="Company,Job Title,Designation">
+                    <img style="height: 15px; width: 15px; margin-top: 0px;"
+                        src="file:///C:/Users/Lenovo/Downloads/pin_3177361.png" alt="">
+                    <input type="text" name="city" style="border: 0;" id="" placeholder="city, state">
+                    <input style="margin-bottom: 10px; background-color: #4d39ff; border-radius: 5px;" type="Submit" name="" id="">
+                    <button style="margin-bottom: 10px; background-color: #4d39ff; border-radius: 5px;">Refresh</button>
+                </div>
+            </form>
+        </center>
+        <form action="" enctype="multipart/form-data">
+            {% for i in alldata %}
+            <div
+                style="border: 1px solid #000; margin-top:20px; margin-left:50px; margin-right:50px; border-radius: 10px;">
+                <img src="{{ i.companyimage.url }}" style="margin-top: 5px;" height="40px" width="200px"
+                    alt="l,lkklklk">
+                <h4 style="margin-top: 5px; margin-left: 10px;">{{i.companyname}}</h4>
+                <h2 style="margin-top: 5px; margin-left: 10px;">{{i.jobtitle}}</h2>
+                <p style="margin-top: -10px; margin-left:10px;">{{i.jobdescription}}</p>
+                <p style="margin-top: -10px; margin-left:10px;">{{i.city}}, {{i.state}}</p>
+                <p
+                    style="margin-top: -10px; margin-left:10px; background-color: rgb(230, 227, 227); margin-right: 1050px; border-radius: 5px;">
+                    &nbsp;₹{{i.salary}} {{i.salarytype}}</p>
+                <button
+                    style="height: 40px; width: 100px; float: right; margin-top: -50px; margin-right: 10px; background-color: rgb(0, 0, 255); border-radius: 10px;"><b>Apply
+                        Now</b></button>
+            </div>
+            {% endfor %}
+        </form>
+        <div style="float: left; margin-top: 20px; margin-left:50px;">
+            {% if alldata.has_previous %}
+            <a href="?page={{ alldata.previous_page_number }}">
+                <button style="margin-right: 10px; border-radius: 10px;">Previous</button>
+            </a>
+            {% endif %}
+
+            {% if alldata.has_next %}
+            <a href="?page={{ alldata.next_page_number }}">
+                <button style="border-radius: 10px;">Load More</button>
+            </a>
+            {% endif %}
+        </div>
+    </body>
+
+</html>

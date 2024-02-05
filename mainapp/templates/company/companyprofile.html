@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image: url('https://images.unsplash.com/photo-1599239663833-4c1cdc22892a?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: 100%">
+    <form action="" enctype="multipart/form-data" >
+        <button style="float: right; margin-left: -50px; margin-top: 0px;"><a href="/logout">Log Out</a></button>
+        <h1 style="margin-right: 20px;">Wellcome {{firstname}} {{lastname}} </h1>
+        <div style="display: flex; margin-left: 100px;">
+            <p style="background-color: rgba(255, 110, 14, 0.986); width: 60px; border-radius: 5px;"><a style="margin-left: 5px;" href="/jobpost/">Pos-Job</a></p>&nbsp;&nbsp;
+            <p style="background-color: rgb(27, 255, 255); width: 70px; border-radius: 5px;"><a style="margin-left: 5px;" href="/postedjobsee/">Job List</a></p>
+            &nbsp;&nbsp; <p style="background-color: rgb(230, 255, 7); width: 110px; border-radius: 5px;"><a style="margin-left: 5px;" href="/companyupdatep/" alt="">Update Profile</a></p>
+        </div>
+        <div>
+            <center><img style="height: 150px; width: 150px; border-radius: 80px; margin-top: -100px; margin-left: 50px;" src="{{ companylogo }}" alt=""></center>
+        </div>
+        <center>
+            <table>
+                <div>
+                    <tr>
+                        <td>First Name:</td>
+                        <td><input type="text" name="fname" value="{{firstname}}" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input type="text" name="lname" value="{{lastname}}" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" name="email" value="{{email}}" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile:</td>
+                        <td><input type="text" name="mobile" value="{{mobile}}" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>City:</td>
+                        <td><input type="text" name="city" value="{{city}}" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td><input type="text" name="state" value="{{state}}" id=""></td>
+                    </tr>
+                </div> 
+            </table>   
+        </center>
+    </form>
+</body>
+</html>

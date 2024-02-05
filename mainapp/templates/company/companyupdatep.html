@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <button><a href="/companyprofile/">Home</a></button>
+    <button style="float: right;"><a href="/logout/">Logout</a></button>
+    <title>Document</title>
+</head>
+<body  style="background-image: url('https://wallpapers.com/images/high/profile-picture-background-3gqkl8r2ufnr5tzl.webp'); background-size: 100%">
+    <form action="" method="POST" enctype="multipart/form-data" >
+        {% csrf_token %}
+        <img style="float: right; height: 150px; width: 150px; border-radius: 50px; margin-right: 50px;" src="{{ companylogo }}" alt="">
+        <input style="float: right; margin-top: 160px; margin-right: -270px;" type="file" name="companylogo" id="">
+        <h1 style="margin-left: 100px;">Wellcome {{firstname}} {{lastname}}</h1>
+        <table style="margin-left: 550px;">
+            <div>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="firstname" value="{{firstname}}"></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lastname" value="{{lastname}}"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" name="email" value="{{email}}"></td>
+                </tr>
+                <tr>
+                    <td>Mobile:</td>
+                    <td><input type="text" name="mobile" value="{{mobile}}"></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text" name="city" value="{{city}}"></td>
+                </tr>
+                <tr>
+                    <td>State:</td>
+                    <td><input type="text" name="state" value="{{state}}"></td>
+                </tr>
+                <tr>
+                    <td><input style="margin-top: 10px;" type="submit" name="" id=""></td>
+                </tr>        
+            </div>
+        </table>
+    </form>
+</body>
+</html>

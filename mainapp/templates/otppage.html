@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style=" margin-top: 200px; background-image: url('https://w0.peakpx.com/wallpaper/272/935/HD-wallpaper-waves-blue-gradient-modern-abstraction-abstract.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <center>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div>
+                <h1>Enter valid OTP</h1>
+                <input type="number" name="otp" id="">
+                <input type="submit" name="" id="">
+                <h3 style="margin-left: -120px;">{{message}}</h3>
+            </div>
+        </form>
+    </center>
+</body>
+</html>

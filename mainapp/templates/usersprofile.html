@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body style="background-image: url('https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');  background-size: cover; background-position: center; background-attachment: fixed;">
+        <div style="display: flex; margin-top: 20px; justify-content:space-between;">
+            <button style="margin-left: 100px;"><a href="/jobprofile/">Home</a></button>
+            <button style="margin-right: 100px; background-color:rgb(143, 55, 55); border-radius: 5px;"><a href="/logout/" style="color: rgb(236, 236, 236);">Log Out</a></button>
+        </div>
+        <div style="margin-left: 500px; margin-top: 100px;">
+            <form action="{% url 'userprofile' %}" method="POST" enctype="multipart/form-data">
+                <img src="{{ candidatelogo }}" style="float: right; margin-right: 200px; margin-top: -100px; height: 200px; width: 200px; border-radius: 100px;" alt="">
+                <input type="file" style="float: right; margin-right: -300px; margin-top: 110px;" name="candidatelogo" value="">
+                {% csrf_token %}
+                <table>
+                    <div>
+                        <tr>
+                            <td>First name</td>
+                            <td><input type="text" name="fname" value="{{ firstname }}" id=""></td>
+                        </tr>
+                        <tr>
+    
+                            <td>Last name</td>
+                            <td><input type="text" name="lname" value="{{ lastname }}" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><input type="text" name="email" value="{{ email }}" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td><input type="text" name="mobile" value="{{mobile}}"></td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td><input type="text" name="city" value="{{city}}"></td>
+                        </tr>
+                        <tr>
+                            <td>State</td>
+                            <td><input type="text" name="state" value="{{state}}"></td>
+                        </tr>
+                        <tr>
+                            <!-- <td><input type="submit" name="userprofile" id=""></td> -->
+                            <td><button type="submit" name="userprofile">Submit</button></td>
+                        </tr>
+                    </div>
+                </table>
+            </form>
+        </div>
+    </body>
+
+</html>
